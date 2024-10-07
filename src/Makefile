@@ -1,0 +1,20 @@
+NAME		= libft.a
+SRCS		= ft_isalpha.c
+OBJS		= ${SRCS:.c=.o}
+CFLAGS		= -Wall -Wextra -Werror
+
+all:		${NAME}
+
+${NAME}:	${OBJS}
+			ar rcs ${NAME} ${OBJS}
+
+${OBJS}:
+			cc ${FLAGS} -I . -c ${SRCS}
+
+clean:
+			rm -f ${OBJS}
+
+fclean:		clean
+			rm -f ${NAME}
+
+re:		fclean all
