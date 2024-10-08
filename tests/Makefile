@@ -2,7 +2,7 @@ TESTFILE	= tests_libft.c
 TESTPROGRAM	= libft.tests
 SRCDIR		= ../src/
 NAME		= libft.a
-SRCS		= ${SRCDIR}ft_isalpha.c ${SRCDIR}ft_isdigit.c ${SRCDIR}ft_isalnum.c
+SRCS		= ${SRCDIR}ft_isalpha.c ${SRCDIR}ft_isdigit.c ${SRCDIR}ft_isalnum.c ${SRCDIR}ft_isascii.c
 OBJS		= ${SRCS:.c=.o}
 
 test:		fclean
