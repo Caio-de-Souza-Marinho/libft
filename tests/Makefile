@@ -1,15 +1,16 @@
-TESTFILE =	tests_libft.c
-TESTPROGRAM =	libft.tests
-SRCDIR =	../src/
-NAME =		libft.a
-OBJS =		${SRCS:.c=.o}
+TESTFILE	= tests_libft.c
+TESTPROGRAM	= libft.tests
+SRCDIR		= ../src/
+NAME		= libft.a
+SRCS		= ${SRCDIR}ft_isalpha.c
+OBJS		= ${SRCS:.c=.o}
 
 test:		fclean
 			make -C ../src
 			@cc -o ${TESTPROGRAM} -I . -I ${SRCDIR} ${TESTFILE} -L${SRCDIR} -lft
 			@./${TESTPROGRAM}
 
-leakfull:	test
+leakfull:
 			valgrind --track-origins=yes --error-exitcode=42 --leak-check=full ./${TESTPROGRAM}
 
 clean:
@@ -17,3 +18,5 @@ clean:
 
 fclean:		clean
 			rm -f ${NAME} ${TESTPROGRAM}
+
+re:		fclean test

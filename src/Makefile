@@ -9,7 +9,7 @@ ${NAME}:	${OBJS}
 			ar rcs ${NAME} ${OBJS}
 
 ${OBJS}:
-			cc ${FLAGS} -I . -c ${SRCS}
+			cc ${CFLAGS} -I . -c ${SRCS}
 
 clean:
 			rm -f ${OBJS}

@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include <fcntl.h>
-#include "minunit.h>
+#include "minunit.h"
 
-#include "libft.h>
+#include "libft.h"
 
 #include "tests_ft_isalpha.c"
 
