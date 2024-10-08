@@ -6,12 +6,11 @@
 /*   By: caide-so <caide-so@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 19:04:13 by caide-so          #+#    #+#             */
-/*   Updated: 2024/10/07 19:08:06 by caide-so         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:14:52 by caide-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minunit.h"
-#include "../src/libft.h"
 #include "../src/ft_isalpha.c"
 
 MU_TEST(test_isalpha_receiving_A_returns_true)
