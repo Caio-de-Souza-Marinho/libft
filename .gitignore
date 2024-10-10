@@ -3,3 +3,4 @@ a.out
 *.swp
 *.a
 *.tests
+main.c
