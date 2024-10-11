@@ -14,7 +14,7 @@ MU_TEST(test_memcpy_dst_and_src_copying_5_positions)
 	// ARRANGE
 	char	dest[] = "watermelonjuice";
 	char	src[] = "apple";
-	char	size = strlen(src);
+	size_t	size = strlen(src);
 	char	expected_dest[] = "applemelonjuice";
 	char	*expected_memory_position = dest;
 	
