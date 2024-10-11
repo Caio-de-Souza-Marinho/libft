@@ -10,6 +10,7 @@
 #include "tests_ft_tolower.c"
 #include "tests_ft_memset.c"
 #include "tests_ft_bzero.c"
+#include "tests_ft_memcpy.c"
 
 int	main(void)
 {
@@ -21,7 +22,8 @@ int	main(void)
 //	MU_RUN_SUITE(ft_toupper_test_suite);
 //	MU_RUN_SUITE(ft_tolower_test_suite);
 //	MU_RUN_SUITE(ft_memset_test_suite);
-	MU_RUN_SUITE(ft_bzero_test_suite);
+//	MU_RUN_SUITE(ft_bzero_test_suite);
+	MU_RUN_SUITE(ft_memcpy_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
