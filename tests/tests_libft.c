@@ -13,6 +13,7 @@
 #include "tests_ft_memcpy.c"
 #include "tests_ft_memmove.c"
 #include "tests_ft_strlcpy.c"
+#include "tests_ft_strlcat.c"
 
 int	main(void)
 {
@@ -28,6 +29,7 @@ int	main(void)
 //	MU_RUN_SUITE(ft_memcpy_test_suite);
 //	MU_RUN_SUITE(ft_memmove_test_suite);
 //	MU_RUN_SUITE(ft_strlcpy_test_suite);
+//	MU_RUN_SUITE(ft_strlcat_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
