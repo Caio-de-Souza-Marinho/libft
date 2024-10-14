@@ -18,6 +18,7 @@
 #include "tests_ft_strrchr.c"
 #include "tests_ft_strncmp.c"
 #include "tests_ft_memchr.c"
+#include "tests_ft_memcmp.c"
 
 int	main(void)
 {
@@ -37,7 +38,8 @@ int	main(void)
 //	MU_RUN_SUITE(ft_strchr_test_suite);
 //	MU_RUN_SUITE(ft_strrchr_test_suite);
 //	MU_RUN_SUITE(ft_strncmp_test_suite);
-	MU_RUN_SUITE(ft_memchr_test_suite);
+//	MU_RUN_SUITE(ft_memchr_test_suite);
+//	MU_RUN_SUITE(ft_memcmp_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
