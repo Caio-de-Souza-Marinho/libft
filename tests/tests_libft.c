@@ -15,6 +15,7 @@
 #include "tests_ft_strlcpy.c"
 #include "tests_ft_strlcat.c"
 #include "tests_ft_strchr.c"
+#include "tests_ft_strrchr.c"
 
 int	main(void)
 {
@@ -32,6 +33,7 @@ int	main(void)
 //	MU_RUN_SUITE(ft_strlcpy_test_suite);
 //	MU_RUN_SUITE(ft_strlcat_test_suite);
 //	MU_RUN_SUITE(ft_strchr_test_suite);
+//	MU_RUN_SUITE(ft_strrchr_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
