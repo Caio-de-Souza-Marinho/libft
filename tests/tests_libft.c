@@ -20,6 +20,7 @@
 #include "tests_ft_memchr.c"
 #include "tests_ft_memcmp.c"
 #include "tests_ft_strnstr.c"
+#include "tests_ft_atoi.c"
 
 int	main(void)
 {
@@ -42,6 +43,7 @@ int	main(void)
 //	MU_RUN_SUITE(ft_memchr_test_suite);
 //	MU_RUN_SUITE(ft_memcmp_test_suite);
 //	MU_RUN_SUITE(ft_strnstr_test_suite);
+	MU_RUN_SUITE(ft_atoi_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
