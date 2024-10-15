@@ -1,5 +1,6 @@
 TESTFILE	= tests_libft.c
 TESTPROGRAM	= libft.tests
+CC		= clang
 SRCDIR		= ../src/
 NAME		= libft.a
 SRCS		= ${SRCDIR}ft_isalpha.c ${SRCDIR}ft_isdigit.c ${SRCDIR}ft_isalnum.c ${SRCDIR}ft_isascii.c ${SRCDIR}ft_isprint.c \
@@ -11,7 +12,7 @@ OBJS		= ${SRCS:.c=.o}
 
 test:		fclean
 			make -C ../src
-			@cc -o ${TESTPROGRAM} -I . -I ${SRCDIR} ${TESTFILE} -L${SRCDIR} -lft
+			@${CC} -o ${TESTPROGRAM} -I . -I ${SRCDIR} ${TESTFILE} -L${SRCDIR} -lft
 			@./${TESTPROGRAM}
 
 leakfull:
