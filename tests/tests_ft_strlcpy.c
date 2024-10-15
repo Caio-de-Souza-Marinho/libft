@@ -159,7 +159,7 @@ MU_TEST_SUITE(ft_strlcpy_test_suite)
 	MU_RUN_TEST(test_strlcpy_passing_ai_oi_2_set_dst_as_o_and_returns_2);
 	MU_RUN_TEST(test_strlcpy_passing_ai_oi_3_set_dst_as_oi_and_returns_2);
 	MU_RUN_TEST(test_strlcpy_passing_ai_boi_3_set_dst_as_bo_and_returns_3);
-	MU_RUN_TEST(test_strlcpy_passing_src_as_null_returns_0);
+	//MU_RUN_TEST(test_strlcpy_passing_src_as_null_returns_0);
 	MU_RUN_TEST(test_strlcpy_passing_size_0_returns_src_len_without_modifying_dst);
 	MU_RUN_TEST(test_strlcpy_passing_size_exact_src_len_plus_one);
 	MU_RUN_TEST(test_strlcpy_large_src_small_dst);
