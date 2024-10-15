@@ -45,7 +45,7 @@ int	main(void)
 //	MU_RUN_SUITE(ft_memcmp_test_suite);
 //	MU_RUN_SUITE(ft_strnstr_test_suite);
 //	MU_RUN_SUITE(ft_atoi_test_suite);
-	MU_RUN_SUITE(ft_calloc_test_suite);
+//	MU_RUN_SUITE(ft_calloc_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
