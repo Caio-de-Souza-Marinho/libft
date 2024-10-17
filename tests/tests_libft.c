@@ -25,6 +25,7 @@
 #include "tests_ft_strdup.c"
 #include "tests_ft_substr.c"
 #include "tests_ft_strjoin.c"
+#include "tests_ft_strtrim.c"
 
 int	main(void)
 {
@@ -52,6 +53,7 @@ int	main(void)
 //	MU_RUN_SUITE(ft_strdup_test_suite);
 //	MU_RUN_SUITE(ft_substr_test_suite);
 //	MU_RUN_SUITE(ft_strjoin_test_suite);
+//	MU_RUN_SUITE(ft_strtrim_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
