@@ -13,16 +13,21 @@
 #include "libft.h"
 
 
-static int	word_count(char const *str, char c);
+static int	count_words(char const *str, char c);
 
 char	**ft_split(char const *s, char c)
 {
+	char	**res;
 	int	words;
 
-	words = word_count(s, c);
+	res = (char **)malloc(count_words(s, c) + 1 * sizeof(char *));
+	if (!res)
+		return (NULL);
+	// TODO: extract substrings
+	// TODO: free all memory
 }
 
-static int	word_count(char const *str, char c)
+static int	count_words(char const *str, char delimiter)
 {
 	int	count;
 	int	x;
@@ -33,12 +38,12 @@ static int	word_count(char const *str, char c)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != c && x == 0)
+		if (str[i] != delimiter && x == 0)
 		{
 			x = 1;
 			count++;
 		}
-		else if (str[i] == c) 
+		else if (str[i] == delimiter) 
 			x = 0;
 		i++;
 	}
