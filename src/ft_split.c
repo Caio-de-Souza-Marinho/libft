@@ -12,38 +12,89 @@
 
 #include "libft.h"
 
+static int	word_count(const char *s, char c);
+static char	*fill_word(const char *s, int start, int end);
+static void	*ft_free(char **strs, int count);
 
-static int	count_words(char const *str, char c);
-
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**res;
-	int	words;
+	size_t	i;
+	int		j;
+	int		start_word;
 
-	res = (char **)malloc(count_words(s, c) + 1 * sizeof(char *));
+	i = 0;
+	j = 0;
+	start_word = -1;
+	res = ft_calloc((word_count(s, c) + 1), sizeof(char *));
 	if (!res)
 		return (NULL);
-	// TODO: extract substrings
-	// TODO: free all memory
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && start_word < 0)
+			start_word = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && start_word >= 0)
+		{
+			res[j] = fill_word(s, start_word, i);
+			if (!(res[j++]))
+				return (ft_free(res, j - 1));
+			start_word = -1;
+		}
+		i++;
+	}
+	return (res);
 }
 
-static int	count_words(char const *str, char delimiter)
+static void	*ft_free(char **strs, int count)
 {
-	int	count;
-	int	x;
 	int	i;
 
-	count = 0;
-	x = 0;
 	i = 0;
-	while (str[i] != '\0')
+	while (i < count)
 	{
-		if (str[i] != delimiter && x == 0)
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (NULL);
+}
+
+static char	*fill_word(const char *s, int start, int end)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc((end - start + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	while (start < end)
+	{
+		word[i] = s[start];
+		i++;
+		start++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+static int	word_count(const char *s, char c)
+{
+	int	count;
+	int	i;
+	int	x;
+
+	count = 0;
+	i = 0;
+	x = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c && x == 0)
 		{
 			x = 1;
 			count++;
 		}
-		else if (str[i] == delimiter) 
+		else if (s[i] == c)
 			x = 0;
 		i++;
 	}
