@@ -67,10 +67,10 @@
 #include <math.h>
 
 /*  Print with colors */
-#define PRINTRED(X)     "\033[31m"X"\033[0m"            /* Red */
-#define PRINTGRN(X)     "\033[32m"X"\033[0m"            /* Green */
-#define BOLDRED(X)      "\033[1m\033[31m"X"\033[0m"     /* Bold Red */
-#define BOLDGREEN(X)    "\033[1m\033[32m"X"\033[0m"     /* Bold Green */
+#define PRINTRED(X)     "\033[31m" X"\033[0m"            /* Red */
+#define PRINTGRN(X)     "\033[32m" X"\033[0m"            /* Green */
+#define BOLDRED(X)      "\033[1m\033[31m" X"\033[0m"     /* Bold Red */
+#define BOLDGREEN(X)    "\033[1m\033[32m" X"\033[0m"     /* Bold Green */
 
 /*  Maximum length of last message */
 #define MINUNIT_MESSAGE_LEN 1024
