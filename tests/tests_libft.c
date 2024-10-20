@@ -31,6 +31,7 @@
 #include "tests_ft_strmapi.c"
 #include "tests_ft_striteri.c"
 #include "tests_ft_putchar_fd.c"
+#include "tests_ft_putstr_fd.c"
 
 int	main(void)
 {
@@ -63,7 +64,8 @@ int	main(void)
 //	MU_RUN_SUITE(ft_itoa_test_suite);
 //	MU_RUN_SUITE(ft_strmapi_test_suite);
 //	MU_RUN_SUITE(ft_striteri_test_suite);
-	MU_RUN_SUITE(ft_putchar_fd_test_suite);
+//	MU_RUN_SUITE(ft_putchar_fd_test_suite);
+	MU_RUN_SUITE(ft_putstr_fd_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
