@@ -4,3 +4,4 @@ a.out
 *.a
 *.tests
 main.c
+libft_tester/
