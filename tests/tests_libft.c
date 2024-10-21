@@ -34,6 +34,7 @@
 #include "tests_ft_putstr_fd.c"
 #include "tests_ft_putendl_fd.c"
 #include "tests_ft_putnbr_fd.c"
+#include "tests_ft_lstnew.c"
 
 int	main(void)
 {
@@ -69,7 +70,8 @@ int	main(void)
 //	MU_RUN_SUITE(ft_putchar_fd_test_suite);
 //	MU_RUN_SUITE(ft_putstr_fd_test_suite);
 //	MU_RUN_SUITE(ft_putendl_fd_test_suite);
-	MU_RUN_SUITE(ft_putnbr_fd_test_suite);
+//	MU_RUN_SUITE(ft_putnbr_fd_test_suite);
+	MU_RUN_SUITE(ft_lstnew_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
