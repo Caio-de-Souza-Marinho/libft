@@ -1,13 +1,14 @@
 #!/bin/bash
 
-GREEN='\033[0;32m'
+GREEN='\033[1;32m'
 NO_COLOR='\033[0m' # No Color
 
 # Rebuild libft in src
 cd src && \
-make re
-cd ../tests && \
+make fclean && \
+make bonus
 # Compile the test program
+cd ../tests && \
 make && \
 # Run the tests with Valgrind for memory checking
 make leakfull && \
@@ -15,4 +16,4 @@ make leakfull && \
 cd ../src && \
 norminette && \
 echo "" && \
-echo -e "${GREEN}SUCESSO!${NO_COLOR}"
+echo -e "${GREEN}SUCCESS!${NO_COLOR}"
