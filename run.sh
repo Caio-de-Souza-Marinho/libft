@@ -15,5 +15,6 @@ make leakfull && \
 # Check code style
 cd ../src && \
 norminette && \
+~/francinette/tester.sh && \
 echo "" && \
 echo -e "${GREEN}SUCCESS!${NO_COLOR}"
