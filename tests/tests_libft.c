@@ -40,6 +40,7 @@
 #include "tests_ft_lstlast.c"
 #include "tests_ft_lstadd_back.c"
 #include "tests_ft_lstdelone.c"
+#include "tests_ft_lstclear.c"
 
 int	main(void)
 {
@@ -81,7 +82,8 @@ int	main(void)
 //	MU_RUN_SUITE(ft_lstsize_test_suite);
 //	MU_RUN_SUITE(ft_lstlast_test_suite);
 //	MU_RUN_SUITE(ft_lstadd_back_test_suite);
-	MU_RUN_SUITE(ft_lstdelone_test_suite);
+//	MU_RUN_SUITE(ft_lstdelone_test_suite);
+	MU_RUN_SUITE(ft_lstclear_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
