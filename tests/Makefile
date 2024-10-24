@@ -1,5 +1,5 @@
 NAME		= libft.a
-CC		= clang
+CC		= cc
 RM		= rm -f
 TESTFILE	= tests_libft.c
 TESTPROGRAM	= libft.tests
