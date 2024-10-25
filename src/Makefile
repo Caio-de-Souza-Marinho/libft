@@ -21,8 +21,8 @@ all:		${NAME}
 ${NAME}:	${OBJS}
 			ar rcs ${NAME} ${OBJS} 
 
-bonus:		${OBJS} ${BONUS_OBJS}
-			ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus:		${BONUS_OBJS}
+			ar rcs ${NAME} ${BONUS_OBJS}
 
 ${OBJS}:
 			${CC} ${CFLAGS} -I . -c ${SRCS}
