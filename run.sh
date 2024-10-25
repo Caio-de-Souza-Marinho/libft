@@ -6,6 +6,7 @@ NO_COLOR='\033[0m' # No Color
 # Rebuild libft in src
 cd src && \
 make fclean && \
+make && \
 make bonus
 # Compile the test program
 cd ../tests && \
@@ -15,6 +16,6 @@ make leakfull && \
 # Check code style
 cd ../src && \
 norminette && \
-# ~/francinette/tester.sh && \
+~/francinette/tester.sh && \
 echo "" && \
 echo -e "${GREEN}SUCCESS!${NO_COLOR}"
