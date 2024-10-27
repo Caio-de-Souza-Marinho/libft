@@ -17,6 +17,7 @@ SRCS		= ${SRCDIR}ft_isalpha.c ${SRCDIR}ft_isdigit.c ${SRCDIR}ft_isalnum.c ${SRCD
 OBJS		= ${SRCS:.c=.o}
 
 test:		fclean
+			make -C ../src
 			make -C ../src bonus
 			@${CC} -o ${TESTPROGRAM} -I . -I ${SRCDIR} ${TESTFILE} -L${SRCDIR} -lft
 			@./${TESTPROGRAM}
