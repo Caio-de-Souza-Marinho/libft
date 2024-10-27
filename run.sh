@@ -3,12 +3,16 @@
 GREEN='\033[1;32m'
 NO_COLOR='\033[0m' # No Color
 
-# Rebuild libft in src
-echo -e "${GREEN}Rebuilding libft...${NO_COLOR}"
+# Run norminette and rebuild libft in src
+echo -e "${GREEN}Running Norminette${NO_COLOR}"
 cd src && \
+norminette && \
+echo # Add newline
+
+echo -e "${GREEN}Rebuilding libft...${NO_COLOR}"
 make fclean && \
 make && \
-make bonus
+make bonus && \
 
 echo -e "\n${GREEN}Compiling the test program...${NO_COLOR}"
 # Compile the test program
@@ -33,12 +37,8 @@ else
     exit 1
 fi
 
-# Check code style
-echo -e "\n${GREEN}Checking code style with Norminette...${NO_COLOR}"
-cd src && \
-norminette && \
-
 # Run francinette tests
+cd src && \
 echo -e "\n${GREEN}Running Francinette tests...${NO_COLOR}"
 ~/francinette/tester.sh && \
 
