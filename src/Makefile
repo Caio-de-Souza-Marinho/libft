@@ -18,17 +18,14 @@ BONUS_OBJS	= ${BONUS:.c=.o}
 
 all:		${NAME}
 
+%.o:		%.c
+		${CC} ${CFLAGS} -c $< -o $@
+
 ${NAME}:	${OBJS}
 			ar rcs ${NAME} ${OBJS} 
 
 bonus:		${BONUS_OBJS}
 			ar rcs ${NAME} ${BONUS_OBJS}
-
-${OBJS}:
-			${CC} ${CFLAGS} -I . -c ${SRCS}
-
-${BONUS_OBJS}:
-			${CC} ${CFLAGS} -I . -c ${BONUS}
 
 clean:
 			${RM} ${OBJS} ${BONUS_OBJS}
