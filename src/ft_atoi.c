@@ -14,6 +14,12 @@
 
 static int	ft_isspace(char c);
 
+/* @brief Converts the initial portion of the string pointed to by nptr to int. 
+ *
+ * @param nptr a string to convert
+ * @return int with the converted value.
+*/
+
 int	ft_atoi(const char *nptr)
 {
 	int	result;
