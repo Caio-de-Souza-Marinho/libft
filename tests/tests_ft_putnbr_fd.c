@@ -1,5 +1,7 @@
 #include "minunit.h"
 #include "../src/ft_putnbr_fd.c"
+#include <fcntl.h>
+#include <sys/stat.h>
 
 MU_TEST(test_putnbr_fd_entering_12345_in_empty_file)
 {

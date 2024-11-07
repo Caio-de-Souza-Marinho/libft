@@ -1,5 +1,7 @@
 #include "minunit.h"
 #include "../src/ft_putchar_fd.c"
+#include <fcntl.h>
+#include <sys/stat.h>
 
 MU_TEST(test_putchar_fd_entering_A_in_empty_file)
 {
