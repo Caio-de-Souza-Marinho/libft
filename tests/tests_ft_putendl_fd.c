@@ -1,5 +1,7 @@
 #include "minunit.h"
 #include "../src/ft_putendl_fd.c"
+#include <fcntl.h>
+#include <sys/stat.h>
 
 MU_TEST(test_putendl_fd_entering_string_caio_in_empty_file)
 {

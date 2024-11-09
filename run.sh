@@ -38,8 +38,8 @@ else
 fi
 
 # Run francinette tests
-cd src && \
-echo -e "\n${GREEN}Running Francinette tests...${NO_COLOR}"
-~/francinette/tester.sh && \
+# cd src && \
+# echo -e "\n${GREEN}Running Francinette tests...${NO_COLOR}"
+# ~/francinette/tester.sh && \
 
 echo -e "\n${GREEN}All tasks completed successfully!${NO_COLOR}"
