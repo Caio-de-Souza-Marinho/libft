@@ -43,6 +43,7 @@
 #include "tests_ft_lstclear.c"
 #include "tests_ft_lstiter.c"
 #include "tests_ft_lstmap.c"
+#include "tests_get_next_line.c"
 
 int	main(void)
 {
@@ -88,6 +89,7 @@ int	main(void)
 	MU_RUN_SUITE(ft_lstclear_test_suite);
 	MU_RUN_SUITE(ft_lstiter_test_suite);
 	MU_RUN_SUITE(ft_lstmap_test_suite);
+	MU_RUN_SUITE(get_next_line_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
