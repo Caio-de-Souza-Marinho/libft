@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strlen.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strlen_receiving_A_returns_1)
 {

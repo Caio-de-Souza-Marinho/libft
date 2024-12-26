@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_toupper.c"
+#include "../include/libft.h"
 
 MU_TEST(test_toupper_receiving_A_returns_A)
 {

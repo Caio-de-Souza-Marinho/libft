@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_memmove.c"
+#include "../include/libft.h"
 
 MU_TEST(test_memmove_dst_and_src_copying_5_positions)
 {

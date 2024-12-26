@@ -1,39 +1,94 @@
-NAME		= libft.a
 CC		= cc
-RM		= rm -f
+CFLAGS		= -Wall -Wextra -Werror
+RM		= rm -rf
 TESTFILE	= tests_libft.c
-TESTPROGRAM	= libft.tests
-SRCDIR		= ../src/
+TESTPROG	= libft.tests
+SRC_DIR		= ../src/
+OBJ_DIR		= obj/
+INC_DIR		= ../include/
 
-LIBFT_SRCS	= ${SRCDIR}ft_isalpha.c ${SRCDIR}ft_isdigit.c ${SRCDIR}ft_isalnum.c ${SRCDIR}ft_isascii.c ${SRCDIR}ft_isprint.c \
-		  ${SRCDIR}ft_strlen.c  ${SRCDIR}ft_memset.c ${SRCDIR}ft_bzero.c ${SRCDIR}ft_memcpy.c ${SRCDIR}ft_memmove.c \
-		  ${SRCDIR}ft_strlcpy.c ${SRCDIR}ft_strlcat.c ${SRCDIR}ft_toupper.c ${SRCDIR}ft_tolower.c ${SRCDIR}ft_strchr.c \
-		  ${SRCDIR}ft_strrchr.c ${SRCDIR}ft_strncmp.c ${SRCDIR}ft_memchr.c ${SRCDIR}ft_memcmp.c ${SRCDIR}ft_strnstr.c \
-		  ${SRCDIR}ft_atoi.c ${SRCDIR}ft_calloc.c ${SRCDIR}ft_strdup.c \
-		  ${SRCDIR}ft_substr.c ${SRCDIR}ft_strjoin.c ${SRCDIR}ft_strtrim.c ${SRCDIR}ft_split.c ${SRCDIR}ft_itoa.c \
-		  ${SRCDIR}ft_striteri.c ${SRCDIR}ft_putchar_fd.c ${SRCDIR}ft_putstr_fd.c ${SRCDIR}ft_putendl_fd.c ${SRCDIR}ft_putnbr_fd.c \
-		  ${SRCDIR}ft_lstnew.c ${SRCDIR}ft_lstadd_front.c ${SRCDIR}ft_lstsize.c ${SRCDIR}ft_lstlast.c ${SRCDIR}ft_lstadd_back.c \
-		  ${SRCDIR}ft_lstdelone.c ${SRCDIR}ft_lstclear.c ${SRCDIR}ft_lstiter.c ${SRCDIR}ft_lstmap.c
+INCLUDE		= -I ${INC_DIR}
 
-GNL_SRCS	= ${SRCDIR}get_next_line.c ${SRCDIR}get_next_line_utils.c
+BOOLEAN_DIR	= ${SRC_DIR}boolean/
+IO_DIR		= ${SRC_DIR}io/
+LIST_DIR	= ${SRC_DIR}list/
+MEM_DIR		= ${SRC_DIR}mem/
+STRING_DIR	= ${SRC_DIR}string/
+GNL_DIR		= ${SRC_DIR}get_next_line/
+FT_PRINTF_DIR	= ${SRC_DIR}ft_printf/
 
-SRCS		= ${LIBFT_SRCS} ${GNL_SRCS}
+SRCS		= ${BOOLEAN_DIR}ft_isalnum.c \
+		  ${BOOLEAN_DIR}ft_isalpha.c \
+		  ${BOOLEAN_DIR}ft_isascii.c \
+		  ${BOOLEAN_DIR}ft_isdigit.c \
+		  ${BOOLEAN_DIR}ft_isprint.c \
+		  ${IO_DIR}ft_putchar_fd.c \
+		  ${IO_DIR}ft_putendl_fd.c \
+		  ${IO_DIR}ft_putnbr_fd.c \
+		  ${IO_DIR}ft_putstr_fd.c \
+		  ${LIST_DIR}ft_lstadd_back.c \
+		  ${LIST_DIR}ft_lstadd_front.c \
+		  ${LIST_DIR}ft_lstclear.c \
+		  ${LIST_DIR}ft_lstdelone.c \
+		  ${LIST_DIR}ft_lstiter.c \
+		  ${LIST_DIR}ft_lstlast.c \
+		  ${LIST_DIR}ft_lstmap.c \
+		  ${LIST_DIR}ft_lstnew.c \
+		  ${LIST_DIR}ft_lstsize.c \
+		  ${MEM_DIR}ft_bzero.c \
+		  ${MEM_DIR}ft_calloc.c \
+		  ${MEM_DIR}ft_memchr.c \
+		  ${MEM_DIR}ft_memcmp.c \
+		  ${MEM_DIR}ft_memcpy.c \
+		  ${MEM_DIR}ft_memmove.c \
+		  ${MEM_DIR}ft_memset.c \
+		  ${STRING_DIR}ft_atoi.c \
+		  ${STRING_DIR}ft_itoa.c \
+		  ${STRING_DIR}ft_split.c \
+		  ${STRING_DIR}ft_strchr.c \
+		  ${STRING_DIR}ft_strdup.c \
+		  ${STRING_DIR}ft_striteri.c \
+		  ${STRING_DIR}ft_strjoin.c \
+		  ${STRING_DIR}ft_strlcat.c \
+		  ${STRING_DIR}ft_strlcpy.c \
+		  ${STRING_DIR}ft_strlen.c \
+		  ${STRING_DIR}ft_strmapi.c \
+		  ${STRING_DIR}ft_strncmp.c \
+		  ${STRING_DIR}ft_strnstr.c \
+		  ${STRING_DIR}ft_strrchr.c \
+		  ${STRING_DIR}ft_strtrim.c \
+		  ${STRING_DIR}ft_substr.c \
+		  ${STRING_DIR}ft_tolower.c \
+		  ${STRING_DIR}ft_toupper.c \
+		  ${GNL_DIR}get_next_line.c \
+		  ${GNL_DIR}get_next_line_utils.c \
+		  ${FT_PRINTF_DIR}ft_printf.c \
+		  ${FT_PRINTF_DIR}ft_printf_buffer.c \
+		  ${FT_PRINTF_DIR}ft_printf_char.c \
+		  ${FT_PRINTF_DIR}ft_printf_int.c \
+		  ${FT_PRINTF_DIR}ft_printf_parser.c \
+		  ${FT_PRINTF_DIR}ft_printf_str.c \
+		  ${FT_PRINTF_DIR}ft_printf_utils.c \
 
-OBJS		= ${SRCS:.c=.o}
+OBJS		= $(SRCS:.c=.o)
 
-test:		fclean
-			make -C ../src
-			@${CC} -o ${TESTPROGRAM} -I . -I ${SRCDIR} ${TESTFILE} -L${SRCDIR} -lft
-			@./${TESTPROGRAM}
+test:		${TESTPROG}
+			@./${TESTPROG}
 
-leakfull:
-			valgrind --track-origins=yes --error-exitcode=42 --leak-check=full ./${TESTPROGRAM}
+${TESTPROG}:	${OBJS} ${TESTFILE}
+			@${CC} ${INCLUDE} -o ${TESTPROG} ${TESTFILE} ${OBJS}
+
+%.o:	%.c
+			@${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@
+
+leakfull:	${TESTPROG}
+			valgrind --track-origins=yes --error-exitcode=42 --leak-check=full ./${TESTPROG}
 
 clean:
-			${RM} ${OBJS}
+			${RM} *.o
 
 fclean:		clean
-			${RM} ${NAME} ${TESTPROGRAM}
+			${RM} ${TESTPROG}
 
 re:		fclean test
 

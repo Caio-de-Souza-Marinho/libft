@@ -7,16 +7,12 @@ echo -e "\n${GREEN}Running Norminette${NO_COLOR}"
 cd src && \
 norminette && \
 
+cd .. && \
 echo -e "\n${GREEN}Rebuilding libft...${NO_COLOR}"
-make fclean && \
-make && \
-# make bonus && \
+make re && \
 
-echo -e "\n${GREEN}Compiling the test program...${NO_COLOR}"
-cd ../tests && \
-make && \
-
-echo -e "\n${GREEN}Running Valgrind tests...${NO_COLOR}"
+echo -e "\n${GREEN}Running test program with Valgrind...${NO_COLOR}"
+cd tests && \
 make leakfull && \
 
 # echo -e "\n${GREEN}Compiling main.c using the static library...${NO_COLOR}"
@@ -31,10 +27,5 @@ make leakfull && \
 #    echo -e "${NO_COLOR}Compilation of main.c failed.${NO_COLOR}"
 #    exit 1
 # fi
-
-# Run francinette tests
-# cd src && \
-# echo -e "\n${GREEN}Running Francinette tests...${NO_COLOR}"
-# ~/francinette/tester.sh && \
 
 echo -e "\n${GREEN}All tasks completed successfully!${NO_COLOR}"

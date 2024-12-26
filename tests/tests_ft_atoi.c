@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_atoi.c"
+#include "../include/libft.h"
 
 MU_TEST(test_atoi_convert_1_char_to_1_integer)
 {

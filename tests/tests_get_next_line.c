@@ -1,8 +1,8 @@
 #include <fcntl.h>
+#include "../include/libft.h"
 #include <sys/stat.h>
 #include <stdio.h>
 #include "minunit.h"
-#include "../src/libft.h"
 
 MU_TEST(test_gnl_bonus_normal_file)
 {

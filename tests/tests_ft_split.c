@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_split.c"
+#include "../include/libft.h"
 
 MU_TEST(test_split_string_hello_world_cool_returns_array_hello_world_cool_null)
 {

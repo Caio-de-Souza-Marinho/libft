@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strtrim.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strtrim_abbbbcaiobbbbaaa_should_return_caio)
 {

@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_isdigit.c"
+#include "../include/libft.h"
 
 MU_TEST(ft_isdigit_receiving_A_returns_false)
 {

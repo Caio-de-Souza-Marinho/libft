@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_striteri.c"
+#include "../include/libft.h"
 
 void	test_function(unsigned int i, char *c)
 {

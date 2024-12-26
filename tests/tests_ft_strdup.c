@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strdup.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strdup_duplicate_string_one_char)
 {

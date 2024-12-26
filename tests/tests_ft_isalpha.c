@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_isalpha.c"
+#include "../include/libft.h"
 
 MU_TEST(test_isalpha_receiving_A_returns_true)
 {

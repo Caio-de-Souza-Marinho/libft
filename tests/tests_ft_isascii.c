@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_isascii.c"
+#include "../include/libft.h"
 
 MU_TEST(test_isascii_receiving_A_return_true)
 {

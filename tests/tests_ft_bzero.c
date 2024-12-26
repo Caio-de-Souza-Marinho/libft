@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_bzero.c"
+#include "../include/libft.h"
 
 MU_TEST(test_bzero_passing_one_byte_should_set_al_to_null)
 {

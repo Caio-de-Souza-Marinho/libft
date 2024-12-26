@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strnstr.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strnstr_find_io_in_string_caio_return_pointer_to_io)
 {

@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_tolower.c"
+#include "../include/libft.h"
 
 MU_TEST(test_tolower_receiving_A_returns_a)
 {

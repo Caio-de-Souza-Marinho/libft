@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strlcpy.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strlcpy_passing_ai_oi_2_set_dst_as_o_and_returns_2)
 {

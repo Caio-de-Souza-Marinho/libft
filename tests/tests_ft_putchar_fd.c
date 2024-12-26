@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_putchar_fd.c"
+#include "../include/libft.h"
 #include <fcntl.h>
 #include <sys/stat.h>
 

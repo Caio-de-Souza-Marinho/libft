@@ -27,7 +27,7 @@ int main(void)
 
 	// String manipulation functions
 	const char *str = "Hello, libft!";
-	printf("ft_strlen('%s'): %zu\n", str, ft_strlen(str));
+	printf("ft_strlen('%s'): %lu\n", str, ft_strlen(str));
 	printf("ft_toupper('a'): %c\n", ft_toupper('a'));
 	printf("ft_tolower('A'): %c\n", ft_tolower('A'));
 

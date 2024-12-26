@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_memcmp.c"
+#include "../include/libft.h"
 
 MU_TEST(test_memcmp_comparing_caio_and_caio_returns_0)
 {

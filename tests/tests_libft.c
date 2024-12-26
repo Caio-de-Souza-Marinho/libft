@@ -44,6 +44,13 @@
 #include "tests_ft_lstiter.c"
 #include "tests_ft_lstmap.c"
 #include "tests_get_next_line.c"
+#include "tests_ft_printf.c"
+#include "tests_ft_printf_c_and_%.c"
+#include "tests_ft_printf_d_and_i.c"
+#include "tests_ft_printf_p.c"
+#include "tests_ft_printf_s.c"
+#include "tests_ft_printf_u.c"
+#include "tests_ft_printf_x_and_X.c"
 
 int	main(void)
 {
@@ -90,6 +97,13 @@ int	main(void)
 	MU_RUN_SUITE(ft_lstiter_test_suite);
 	MU_RUN_SUITE(ft_lstmap_test_suite);
 	MU_RUN_SUITE(get_next_line_test_suite);
+	MU_RUN_SUITE(ft_printf_test_suite);
+	MU_RUN_SUITE(ft_printf_c_and_percent_sign_test_suite);
+	MU_RUN_SUITE(ft_printf_s_test_suite);
+	MU_RUN_SUITE(ft_printf_p_test_suite);
+	MU_RUN_SUITE(ft_printf_d_and_i_test_suite);
+	MU_RUN_SUITE(ft_printf_u_test_suite);
+	MU_RUN_SUITE(ft_printf_x_and_X_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;

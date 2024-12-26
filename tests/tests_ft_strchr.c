@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strchr.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strchr_look_up_non_existing_char_in_string_should_return_NULL)
 {

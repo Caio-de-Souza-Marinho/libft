@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstsize.c"
+#include "../include/libft.h"
 
 MU_TEST(test_lstsize_count_size_should_return_5)
 {

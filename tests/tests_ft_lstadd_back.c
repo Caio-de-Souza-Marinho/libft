@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstadd_back.c"
+#include "../include/libft.h"
 
 MU_TEST(tests_lstadd_back_add_list)
 {

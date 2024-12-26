@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_memchr.c"
+#include "../include/libft.h"
 
 typedef struct {
 	int id;

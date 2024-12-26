@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_isalnum.c"
+#include "../include/libft.h"
 
 MU_TEST(test_isalnum_receiving_A_returns_true)
 {

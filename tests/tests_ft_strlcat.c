@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strlcat.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strlcat_concat_A_and_B_should_set_dst_as_AB)
 {

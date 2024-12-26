@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strmapi.c"
+#include "../include/libft.h"
 
 char	ft_toupper_adapted(unsigned int i, char c)
 {

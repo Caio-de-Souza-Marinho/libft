@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_itoa.c"
+#include "../include/libft.h"
 
 MU_TEST(test_itoa_passing_int_1234_returns_string_1234)
 {

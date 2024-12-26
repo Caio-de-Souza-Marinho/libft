@@ -4,4 +4,4 @@ a.out
 *.swp
 *.a
 *.tests
-libft_tester/
+obj/

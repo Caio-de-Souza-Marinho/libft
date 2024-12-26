@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strncmp.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strncmp_comparing_banana_and_banana_size_6_should_return_zero)
 {

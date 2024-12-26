@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_calloc.c"
+#include "../include/libft.h"
 
 MU_TEST(test_calloc_allocating_1_byte_char)
 {

@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstnew.c"
+#include "../include/libft.h"
 
 MU_TEST(test_lstnew_add_new_node_with_content_string)
 {

@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstdelone.c"
+#include "../include/libft.h"
 
 void	del_content(void *content)
 {

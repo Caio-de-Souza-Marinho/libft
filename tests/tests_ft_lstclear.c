@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstclear.c"
+#include "../include/libft.h"
 
 void	del_elem(void *content)
 {

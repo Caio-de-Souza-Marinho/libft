@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstlast.c"
+#include "../include/libft.h"
 
 MU_TEST(test_lstlast_return_last_element)
 {

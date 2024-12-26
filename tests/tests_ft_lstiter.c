@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_lstiter.c"
+#include "../include/libft.h"
 
 void	to_upper_lst(void *content)
 {

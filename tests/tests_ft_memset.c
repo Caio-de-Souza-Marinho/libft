@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_memset.c"
+#include "../include/libft.h"
 
 MU_TEST(test_memset_setting_null_in_one_mem_position)
 {

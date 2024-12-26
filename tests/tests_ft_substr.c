@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_substr.c"
+#include "../include/libft.h"
 
 MU_TEST(test_substr_string_caio_find_io_return_io)
 {

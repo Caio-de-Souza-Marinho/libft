@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_isprint.c"
+#include "../include/libft.h"
 
 MU_TEST(test_isprint_receiving_A_returns_true)
 {

@@ -1,5 +1,5 @@
 #include "minunit.h"
-#include "../src/ft_strjoin.c"
+#include "../include/libft.h"
 
 MU_TEST(test_strjoin_concat_caio_and_oiac_should_return_caiooiac)
 {
