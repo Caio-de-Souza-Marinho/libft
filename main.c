@@ -1,4 +1,4 @@
-#include "src/libft.h"
+#include "include/libft.h"
 #include <stdio.h>
 #include <fcntl.h>   // For file descriptor functions (open)
 #include <unistd.h>  // For close()
@@ -211,5 +211,13 @@ int main(void)
 	close(fd1);
 	close(fd2);
 	close(fd3);
+
+	int	num1 = 42;
+	int	num2 = -42;
+	ft_printf("[%50d]\n", num1);
+	printf("[%50d]\n", num1);
+
+	ft_printf("[%50d]\n", num2);
+	printf("[%50d]\n", num2);
 	return (0);
 }
