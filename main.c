@@ -219,5 +219,9 @@ int main(void)
 
 	ft_printf("[%50d]\n", num2);
 	printf("[%50d]\n", num2);
+
+	char *str_test_atoibase = "0xFFFFFF";
+	int res = ft_atoi_base(str_test_atoibase, 16);
+	printf("ft_atoi_base: %d\n", res);
 	return (0);
 }

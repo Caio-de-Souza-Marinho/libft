@@ -51,6 +51,7 @@
 #include "tests_ft_printf_s.c"
 #include "tests_ft_printf_u.c"
 #include "tests_ft_printf_x_and_X.c"
+#include "tests_ft_atoi_base.c"
 
 int	main(void)
 {
@@ -104,6 +105,7 @@ int	main(void)
 	MU_RUN_SUITE(ft_printf_d_and_i_test_suite);
 	MU_RUN_SUITE(ft_printf_u_test_suite);
 	MU_RUN_SUITE(ft_printf_x_and_X_test_suite);
+	MU_RUN_SUITE(ft_atoi_base_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
