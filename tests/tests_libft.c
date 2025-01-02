@@ -52,6 +52,7 @@
 #include "tests_ft_printf_u.c"
 #include "tests_ft_printf_x_and_X.c"
 #include "tests_ft_atoi_base.c"
+#include "tests_ft_word_count.c"
 
 int	main(void)
 {
@@ -106,6 +107,7 @@ int	main(void)
 	MU_RUN_SUITE(ft_printf_u_test_suite);
 	MU_RUN_SUITE(ft_printf_x_and_X_test_suite);
 	MU_RUN_SUITE(ft_atoi_base_test_suite);
+	MU_RUN_SUITE(ft_word_count_test_suite);
 
 	MU_REPORT();
 	return MU_EXIT_CODE;
