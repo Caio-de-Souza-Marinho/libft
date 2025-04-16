@@ -13,6 +13,7 @@ make re && \
 
 echo -e "\n${GREEN}Running test program with Valgrind...${NO_COLOR}"
 cd tests && \
+make fclean && \
 make leakfull && \
 
 # echo -e "\n${GREEN}Compiling main.c using the static library...${NO_COLOR}"
