@@ -5,6 +5,7 @@
 #include "tests_ft_isdigit.c"
 #include "tests_ft_isalnum.c"
 #include "tests_ft_isascii.c"
+#include "tests_ft_isspace.c"
 #include "tests_ft_strlen.c"
 #include "tests_ft_toupper.c"
 #include "tests_ft_tolower.c"
@@ -60,6 +61,7 @@ int	main(void)
 	MU_RUN_SUITE(ft_isdigit_test_suite);
 	MU_RUN_SUITE(ft_isalnum_test_suite);
 	MU_RUN_SUITE(ft_isascii_test_suite);
+	MU_RUN_SUITE(ft_isspace_test_suite);
 	MU_RUN_SUITE(ft_strlen_test_suite);
 	MU_RUN_SUITE(ft_toupper_test_suite);
 	MU_RUN_SUITE(ft_tolower_test_suite);
