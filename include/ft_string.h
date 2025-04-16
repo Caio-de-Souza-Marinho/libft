@@ -209,5 +209,5 @@ int		ft_atoi_base(char *str, int base);
  * @param c the delimiter character
  * @return The number of "words" in the string s.
 */
-int		ft_word_count(char const *s, char c);
+size_t	ft_word_count(const char *s, char c);
 #endif
