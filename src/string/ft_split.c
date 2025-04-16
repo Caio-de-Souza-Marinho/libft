@@ -12,57 +12,60 @@
 
 #include "../../include/libft.h"
 
-void	ft_createsplit(char **result, char const *s, char c);
-size_t	ft_addpart(char **result, const char *prev, size_t size, char c);
+static int	split_loop(char const *s, char c, char **res);
+static int	process_word(const char *substr, size_t len, char **res, size_t *j);
 
 char	**ft_split(char const *s, char c)
 {
-	char	**result;
+	char	**res;
+	size_t	word_count;
 
 	if (!s)
 		return (NULL);
-	result = (char **)malloc((ft_word_count(s, c) + 1) * sizeof(char *));
-	if (!result)
+	word_count = ft_word_count(s, c);
+	res = (char **)malloc((word_count + 1) * sizeof(char *));
+	if (!res)
 		return (NULL);
-	ft_createsplit(result, s, c);
-	return (result);
+	if (!split_loop(s, c, res))
+	{
+		free(res);
+		return (NULL);
+	}
+	return (res);
 }
 
-void	ft_createsplit(char **result, char const *s, char c)
+static int	split_loop(char const *s, char c, char **res)
 {
 	size_t	i;
 	size_t	j;
-	size_t	size;
-	size_t	prev;
-	size_t	next;
+	size_t	start;
+	size_t	len;
 
 	i = 0;
 	j = 0;
-	prev = i;
-	next = i;
-	while (1)
+	start = 0;
+	while (s[i])
 	{
-		if (s[i] == c || s[i] == '\0')
-			next = i;
-		size = next - prev;
-		if (size > 1 || (size == 1 && s[i - 1] != c))
-			j += ft_addpart(&result[j], &s[prev], size, c);
-		if (s[i] == '\0')
-			break ;
-		prev = next;
+		if ((i == 0 || s[i - 1] == c) && s[i] != c)
+			start = i;
+		if (s[i] != c && (s[i + 1] == c || !s[i + 1]))
+		{
+			len = i - start + 1;
+			if (!process_word(s + start, len, res, &j))
+				return (0);
+		}
 		i++;
 	}
-	result[j] = NULL;
+	res[j] = NULL;
+	return (1);
 }
 
-size_t	ft_addpart(char **result, const char *prev, size_t size, char c)
+static int	process_word(const char *substr, size_t len, char **res, size_t *j)
 {
-	if (*prev == c)
-	{
-		prev++;
-		size--;
-	}
-	*result = (char *)malloc((size + 1) * sizeof(char));
-	ft_strlcpy(*result, prev, size + 1);
+	res[*j] = (char *)malloc(len + 1);
+	if (!res[*j])
+		return (0);
+	ft_strlcpy(res[*j], substr, len + 1);
+	(*j)++;
 	return (1);
 }
