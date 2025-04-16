@@ -6,7 +6,7 @@
 /*   By: caide-so <caide-so@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 01:16:55 by caide-so          #+#    #+#             */
-/*   Updated: 2025/02/05 20:34:07 by caide-so         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:01:57 by caide-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -210,4 +210,20 @@ int		ft_atoi_base(char *str, int base);
  * @return The number of "words" in the string s.
 */
 size_t	ft_word_count(const char *s, char c);
+
+/* @brief Compares two strings lexicographically by unsigned char value.
+ * 
+ * The comparison is case-sensitive and stops at the first differing character
+ * or when both strings end. Returns the difference between the first pair of
+ * non-matching characters (s1[i] - s2[i]), allowing determination of:
+ * - Zero: identical strings
+ * - Positive: s1 > s2 at first difference
+ * - Negative: s1 < s2 at first difference
+ *
+ * @param s1 First string to compare
+ * @param s2 Second string to compare
+ * @return Integer < 0, 0, or > 0 if s1 is less than, equal to, or greater than s2
+*/
+int	ft_strcmp(const char *s1, const char *s2);
+
 #endif
