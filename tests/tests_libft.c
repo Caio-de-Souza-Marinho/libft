@@ -22,6 +22,7 @@
 #include "tests_ft_memcmp.c"
 #include "tests_ft_strnstr.c"
 #include "tests_ft_atoi.c"
+#include "tests_ft_atol.c"
 #include "tests_ft_calloc.c"
 #include "tests_ft_strdup.c"
 #include "tests_ft_substr.c"
@@ -78,6 +79,7 @@ int	main(void)
 	MU_RUN_SUITE(ft_memcmp_test_suite);
 	MU_RUN_SUITE(ft_strnstr_test_suite);
 	MU_RUN_SUITE(ft_atoi_test_suite);
+	MU_RUN_SUITE(ft_atol_test_suite);
 	MU_RUN_SUITE(ft_calloc_test_suite);
 	MU_RUN_SUITE(ft_strdup_test_suite);
 	MU_RUN_SUITE(ft_substr_test_suite);
