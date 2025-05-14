@@ -51,8 +51,8 @@ static void	set_str_padding_spaces(t_data *data, char *s)
 				data->format.padding_spaces = data->format.width_value - len;
 			else if (data->format.precision_value < len)
 			{
-				data->format.padding_spaces = data->format.width_value - \
-				data->format.precision_value;
+				data->format.padding_spaces = data->format.width_value
+					- data->format.precision_value;
 			}
 		}
 		else
