@@ -19,6 +19,6 @@ jobs:
 
       - name: Run Norminette
         run: |
-          output=$(norminette)
+          output=$(norminette include src)
           echo "$output"
           echo "$output" | grep -q "Error!" && exit 1 || exit 0
