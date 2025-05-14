@@ -27,6 +27,7 @@
 #include "tests_ft_strdup.c"
 #include "tests_ft_substr.c"
 #include "tests_ft_strjoin.c"
+#include "tests_ft_strjoin3.c"
 #include "tests_ft_strtrim.c"
 #include "tests_ft_split.c"
 #include "tests_ft_itoa.c"
@@ -84,6 +85,7 @@ int	main(void)
 	MU_RUN_SUITE(ft_strdup_test_suite);
 	MU_RUN_SUITE(ft_substr_test_suite);
 	MU_RUN_SUITE(ft_strjoin_test_suite);
+	MU_RUN_SUITE(ft_strjoin3_test_suite);
 	MU_RUN_SUITE(ft_strtrim_test_suite);
 	MU_RUN_SUITE(ft_split_test_suite);
 	MU_RUN_SUITE(ft_itoa_test_suite);

@@ -84,6 +84,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 */
 char	*ft_strjoin(char const *s1, char const *s2);
 
+/* @brief Allocates with malloc and returns a new string, which is the result 
+ * of the concatenation of 's1' and 's2'.
+ * 
+ * @param s1 the prefix string
+ * @param s2 the middle string
+ * @param s3 the suffix string
+ * @return The new string. NULL if the allocation fails.
+*/
+char	*ft_strjoin3(char const *s1, char const *s2, char const *s3);
+
 /* @brief Appends the NULL-terminated string 'src' to the end of 'dst'.
  * NULL-terminating the result.
  *
@@ -222,8 +232,8 @@ size_t	ft_word_count(const char *s, char c);
  *
  * @param s1 First string to compare
  * @param s2 Second string to compare
- * @return Integer < 0, 0, or > 0 if s1 is less than, equal to, or greater than s2
+ * @return int < 0, 0, or > 0 if s1 is less than, equal to, or greater than s2
 */
-int	ft_strcmp(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 
 #endif

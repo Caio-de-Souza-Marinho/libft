@@ -51,6 +51,7 @@ SRCS		= ${BOOLEAN_DIR}/ft_isalnum.c \
 		  ${STRING_DIR}/ft_strdup.c \
 		  ${STRING_DIR}/ft_striteri.c \
 		  ${STRING_DIR}/ft_strjoin.c \
+		  ${STRING_DIR}/ft_strjoin3.c \
 		  ${STRING_DIR}/ft_strlcat.c \
 		  ${STRING_DIR}/ft_strlcpy.c \
 		  ${STRING_DIR}/ft_strlen.c \
