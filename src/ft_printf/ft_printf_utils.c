@@ -6,12 +6,14 @@
 /*   By: caide-so <caide-so@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 20:12:23 by caide-so          #+#    #+#             */
-/*   Updated: 2024/12/26 03:41:36 by caide-so         ###   ########.fr       */
+/*   Updated: 2025/07/02 23:32:31 by caide-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
+// Checks if a character exists in a string
+// 1. Iterates through s to find c
 int	in(const char *s, char c)
 {
 	if (s == NULL)
@@ -25,13 +27,16 @@ int	in(const char *s, char c)
 	return (0);
 }
 
+// Computes the length of a string
+// 1. Counts characters until null terminator
+// 2. Returns 0 for NULL input
 int	s_len(const char *s)
 {
 	int	len;
 
-	len = 0;
 	if (s == NULL)
 		return (0);
+	len = 0;
 	while (s[len])
 	{
 		len++;

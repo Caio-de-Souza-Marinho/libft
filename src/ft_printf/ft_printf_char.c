@@ -6,13 +6,17 @@
 /*   By: caide-so <caide-so@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:13:02 by caide-so          #+#    #+#             */
-/*   Updated: 2024/12/26 03:41:36 by caide-so         ###   ########.fr       */
+/*   Updated: 2025/07/02 23:32:50 by caide-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-// [-][width]
+// Prints a single character with width formatting
+// 1. Applies left-justified or right-aligned padding
+// 2. Writes the character to the buffer
+//
+// Note: Handles %c and %% specifiers
 void	printf_char(t_data *data, int c)
 {
 	int	width;

@@ -46,24 +46,9 @@ MU_TEST(test_strdup_duplicate_empty_string)
 	free(actual_result);
 }
 
-MU_TEST(test_strdup_null_string)
-{
-	// ARRANGE
-	char	*s = NULL;
-	char	*expected_result = NULL;
-
-	// ACT
-	char	*actual_result = ft_strdup(s);
-
-	// ASSERT
-	mu_assert_string_eq(expected_result, actual_result);
-	free(actual_result);
-}
-
 MU_TEST_SUITE(ft_strdup_test_suite)
 {
 	MU_RUN_TEST(test_strdup_duplicate_string_one_char);
 	MU_RUN_TEST(test_strdup_duplicate_string_100_chars);
 	MU_RUN_TEST(test_strdup_duplicate_empty_string);
-	//MU_RUN_TEST(test_strdup_null_string);
 }

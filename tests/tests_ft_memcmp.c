@@ -82,4 +82,5 @@ MU_TEST_SUITE(ft_memcmp_test_suite)
 	MU_RUN_TEST(test_memcmp_comparing_caio_and_caip_returns_minus_1);
 	MU_RUN_TEST(test_memcmp_comparing_caip_and_caio_returns_1);
 	MU_RUN_TEST(test_memcmp_comparing_equal_int_arrays_should_returns_0);
+	MU_RUN_TEST(test_memcmp_comparing_elements_int_array);
 }

@@ -31,7 +31,7 @@ MU_TEST(test_isprint_receiving_asterisk_returns_true)
 {
 	// ARRANGE
 	char	input = '*';
-	int	expected_result = 0;
+	int	expected_result = 1;
 
 	// ACT
 	int	actual_result = ft_isprint(input);
@@ -43,7 +43,7 @@ MU_TEST(test_isprint_receiving_asterisk_returns_true)
 MU_TEST(test_isprint_receiving_int_0_returns_false)
 {
 	// ARRANGE
-	char	input = '*';
+	int	input = 0;
 	int	expected_result = 0;
 
 	// ACT

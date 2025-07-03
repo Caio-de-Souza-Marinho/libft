@@ -9,24 +9,11 @@ norminette && \
 
 cd .. && \
 echo -e "\n${GREEN}Rebuilding libft...${NO_COLOR}"
-make re && \
+make fclean && make re && \
 
 echo -e "\n${GREEN}Running test program with Valgrind...${NO_COLOR}"
 cd tests && \
 make fclean && \
 make leakfull && \
-
-# echo -e "\n${GREEN}Compiling main.c using the static library...${NO_COLOR}"
-# cd .. && \
-# cc -Wall -Wextra -Werror main.c -L . -lft -o main.out
-
-# Check if main compilation was successful
-# if [ $? -eq 0 ]; then
-#   echo -e "\n${GREEN}Running main function...${NO_COLOR}"
-#   ./main.out
-# else
-#   echo -e "${NO_COLOR}Compilation of main.c failed.${NO_COLOR}"
-#    exit 1
-# fi
 
 echo -e "\n${GREEN}All tasks completed successfully!${NO_COLOR}"

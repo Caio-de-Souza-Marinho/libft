@@ -1,4 +1,5 @@
-NAME		= libft.a
+BIN_DIR		= bin
+NAME		= ${BIN_DIR}/libft.a
 CC		= cc
 CFLAGS		= -Wall -Wextra -Werror
 RM		= rm -rf
@@ -71,6 +72,7 @@ SRCS		= ${BOOLEAN_DIR}/ft_isalnum.c \
 		  ${FT_PRINTF_DIR}/ft_printf_buffer.c \
 		  ${FT_PRINTF_DIR}/ft_printf_char.c \
 		  ${FT_PRINTF_DIR}/ft_printf_int.c \
+		  ${FT_PRINTF_DIR}/ft_printf_int_utils.c \
 		  ${FT_PRINTF_DIR}/ft_printf_parser.c \
 		  ${FT_PRINTF_DIR}/ft_printf_str.c \
 		  ${FT_PRINTF_DIR}/ft_printf_utils.c \
@@ -80,6 +82,7 @@ OBJS		= ${SRCS:${SRC_DIR}/%.c=${OBJ_DIR}/%.o}
 all:		${NAME}
 
 ${NAME}:	${OBJS}
+			@mkdir -p ${BIN_DIR}
 			ar rcs ${NAME} ${OBJS} 
 
 ${OBJ_DIR}/%.o:	${SRC_DIR}/%.c
