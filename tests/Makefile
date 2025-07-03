@@ -17,7 +17,7 @@ ${TESTPROG}:	${OBJS} ${TESTFILE}
 			@${CC} ${CFLAGS} ${INCLUDE} -o ${TESTPROG} ${TESTFILE} ${LIBFT_A}
 
 leakfull:	${TESTPROG}
-			valgrind --track-origins=yes --error-exitcode=42 --leak-check=full ./${TESTPROG}
+			valgrind --track-origins=yes --error-exitcode=42 --leak-check=full ./${TESTPROG} $(ARGS)
 
 clean:
 			${RM} *.o

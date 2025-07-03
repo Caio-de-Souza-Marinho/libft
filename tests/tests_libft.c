@@ -2,9 +2,30 @@
 #include "minunit.h"
 #include "includes.h"
 
-int	main(void)
+void	run_libft_tests(void);
+void	run_bonus_tests(void);
+void	run_gnl_tests(void);
+void	run_printf_tests(void);
+void	run_additional_tests(void);
+
+int	main(int argc, char **argv)
 {
-	// libft
+	if (argc < 2 || strcmp(argv[1], "libft") == 0)
+		run_libft_tests();
+	if (argc < 2 || strcmp(argv[1], "bonus") == 0)
+		run_bonus_tests();
+	if (argc < 2 || strcmp(argv[1], "gnl") == 0)
+		run_gnl_tests();
+	if (argc < 2 || strcmp(argv[1], "printf") == 0)
+		run_printf_tests();
+	if (argc < 2 || strcmp(argv[1], "additional") == 0)
+		run_additional_tests();
+	MU_REPORT();
+	return MU_EXIT_CODE;
+}
+
+void	run_libft_tests(void)
+{
 	MU_RUN_SUITE(ft_isalpha_test_suite);
 	MU_RUN_SUITE(ft_isdigit_test_suite);
 	MU_RUN_SUITE(ft_isalnum_test_suite);
@@ -39,7 +60,11 @@ int	main(void)
 	MU_RUN_SUITE(ft_putstr_fd_test_suite);
 	MU_RUN_SUITE(ft_putendl_fd_test_suite);
 	MU_RUN_SUITE(ft_putnbr_fd_test_suite);
-	// bonus
+}
+
+void	run_bonus_tests(void)
+{
+	run_libft_tests();
 	MU_RUN_SUITE(ft_lstnew_test_suite);
 	MU_RUN_SUITE(ft_lstadd_front_test_suite);
 	MU_RUN_SUITE(ft_lstsize_test_suite);
@@ -49,8 +74,15 @@ int	main(void)
 	MU_RUN_SUITE(ft_lstclear_test_suite);
 	MU_RUN_SUITE(ft_lstiter_test_suite);
 	MU_RUN_SUITE(ft_lstmap_test_suite);
-	// gnl
+}
+
+void	run_gnl_tests(void)
+{
 	MU_RUN_SUITE(get_next_line_test_suite);
+}
+
+void	run_printf_tests(void)
+{
 	// printf
 	MU_RUN_SUITE(ft_printf_test_suite);
 	MU_RUN_SUITE(ft_printf_c_and_percent_sign_test_suite);
@@ -59,13 +91,13 @@ int	main(void)
 	MU_RUN_SUITE(ft_printf_d_and_i_test_suite);
 	MU_RUN_SUITE(ft_printf_u_test_suite);
 	MU_RUN_SUITE(ft_printf_x_and_X_test_suite);
-	// additional
+}
+
+void	run_additional_tests(void)
+{
 	MU_RUN_SUITE(ft_isspace_test_suite);
 	MU_RUN_SUITE(ft_atol_test_suite);
 	MU_RUN_SUITE(ft_strjoin3_test_suite);
 	MU_RUN_SUITE(ft_atoi_base_test_suite);
 	MU_RUN_SUITE(ft_word_count_test_suite);
-
-	MU_REPORT();
-	return MU_EXIT_CODE;
 }

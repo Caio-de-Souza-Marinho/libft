@@ -14,6 +14,6 @@ make fclean && make re && \
 echo -e "\n${GREEN}Running test program with Valgrind...${NO_COLOR}"
 cd tests && \
 make fclean && \
-make leakfull && \
+make leakfull ARGS="$1"&& \
 
 echo -e "\n${GREEN}All tasks completed successfully!${NO_COLOR}"
