@@ -583,6 +583,11 @@ MU_TEST_SUITE(ft_printf_u_test_suite)
 	MU_RUN_TEST(test_ft_printf_u_int_min_minus_one);
 	MU_RUN_TEST(test_ft_printf_u_int_min_minus_one);
 	MU_RUN_TEST(test_ft_printf_u_two_unsigned_int_int_max_and_int_min);
+	MU_RUN_TEST(test_ft_printf_u_zero);
+}
+
+MU_TEST_SUITE(ft_printf_u_bonus_test_suite)
+{
 	MU_RUN_TEST(test_ft_printf_u_one_positive_int_with_width);
 	MU_RUN_TEST(test_ft_printf_u_one_int_left_aligned);
 	MU_RUN_TEST(test_ft_printf_u_one_positive_int_zero_flag);
@@ -590,6 +595,5 @@ MU_TEST_SUITE(ft_printf_u_test_suite)
 	MU_RUN_TEST(test_ft_printf_u_one_positive_int_with_width_and_precision);
 	MU_RUN_TEST(test_ft_printf_u_one_positive_int_with_large_width);
 	MU_RUN_TEST(test_ft_printf_u_one_int_zero_flag_and_left_alignment);
-	MU_RUN_TEST(test_ft_printf_u_zero);
 	MU_RUN_TEST(test_ft_printf_u_zero_with_width_and_precision);
 }

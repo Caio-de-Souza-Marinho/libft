@@ -318,7 +318,7 @@ MU_TEST(test_gnl_bonus_closing_and_reopening)
 	close(fd1);
 }
 
-MU_TEST_SUITE(get_next_line_test_suite)
+MU_TEST_SUITE(gnl_bonus_test_suite)
 {
 	MU_RUN_TEST(test_gnl_bonus_normal_file);
 	MU_RUN_TEST(test_gnl_bonus_empty_file);

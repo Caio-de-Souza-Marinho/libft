@@ -861,19 +861,23 @@ MU_TEST_SUITE(ft_printf_s_test_suite)
 {
 	MU_RUN_TEST(test_ft_printf_one_string);
 	MU_RUN_TEST(test_ft_printf_two_strings);
+	MU_RUN_TEST(test_ft_printf_str_flag_null_pointer);
+	MU_RUN_TEST(test_ft_printf_str_empty_string);
+	MU_RUN_TEST(test_ft_printf_str_with_text);
+}
+
+MU_TEST_SUITE(ft_printf_s_bonus_test_suite)
+{
 	MU_RUN_TEST(test_ft_printf_str_with_width_of_10);
 	MU_RUN_TEST(test_ft_printf_str_with_width_and_left_aligned);
 	MU_RUN_TEST(test_ft_printf_str_with_precision);
 	MU_RUN_TEST(test_ft_printf_str_with_width_and_precision);
 	MU_RUN_TEST(test_ft_printf_str_with_width_and_precision_and_left_aligned);
-	MU_RUN_TEST(test_ft_printf_str_flag_null_pointer);
-	MU_RUN_TEST(test_ft_printf_str_empty_string);
 	MU_RUN_TEST(test_ft_printf_str_width_smaller_than_string_length);
 	MU_RUN_TEST(test_ft_printf_str_precision_greater_than_string_length);
 	MU_RUN_TEST(test_ft_printf_str_large_width);
 	MU_RUN_TEST(test_ft_printf_str_large_precision);
 	MU_RUN_TEST(test_ft_printf_str_large_width_and_precision);
 	MU_RUN_TEST(test_ft_printf_str_empty_width_and_precision);
-	MU_RUN_TEST(test_ft_printf_str_with_text);
 	MU_RUN_TEST(test_ft_printf_str_invalid_flags);
 }

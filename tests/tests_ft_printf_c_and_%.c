@@ -1060,20 +1060,24 @@ MU_TEST_SUITE(ft_printf_c_and_percent_sign_test_suite)
 {
 	MU_RUN_TEST(test_ft_printf_one_char);
 	MU_RUN_TEST(test_ft_printf_two_chars);
+	MU_RUN_TEST(test_ft_printf_one_newline_char);
+	MU_RUN_TEST(test_ft_printf_null_char);
+	MU_RUN_TEST(test_ft_printf_percent_sign);
+	MU_RUN_TEST(test_ft_printf_multiple_percent_signs);
+	MU_RUN_TEST(test_ft_printf_one_char_and_percent_sign);
+}
+
+MU_TEST_SUITE(ft_printf_c_and_percent_sign_bonus_test_suite)
+{
 	MU_RUN_TEST(test_ft_printf_one_char_width_of_5);
 	MU_RUN_TEST(test_ft_printf_one_char_width_of_asterisk_value_5);
 	MU_RUN_TEST(test_ft_printf_one_char_width_of_5_left_aligned);
 	MU_RUN_TEST(test_ft_printf_one_char_width_of_0);
-	MU_RUN_TEST(test_ft_printf_one_newline_char);
-	MU_RUN_TEST(test_ft_printf_null_char);
 	MU_RUN_TEST(test_ft_printf_null_char_with_width);
 	MU_RUN_TEST(test_ft_printf_null_char_with_width_and_alignment);
 	MU_RUN_TEST(test_ft_printf_tab_char_with_width_and_alignment);
-	MU_RUN_TEST(test_ft_printf_percent_sign);
 	MU_RUN_TEST(test_ft_printf_percent_sign_with_width);
 	MU_RUN_TEST(test_ft_printf_percent_sign_with_width_and_left_aligned);
-	MU_RUN_TEST(test_ft_printf_multiple_percent_signs);
-	MU_RUN_TEST(test_ft_printf_one_char_and_percent_sign);
 	MU_RUN_TEST(test_ft_printf_char_with_zero_flag);
 	MU_RUN_TEST(test_ft_printf_char_with_plus_flag);
 	MU_RUN_TEST(test_ft_printf_char_with_space_flag);

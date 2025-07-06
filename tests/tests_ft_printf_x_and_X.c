@@ -354,9 +354,12 @@ MU_TEST(test_ft_printf_zero_hex_upper_with_width_and_precision)
 
 MU_TEST_SUITE(ft_printf_x_and_X_test_suite)
 {
-
 	MU_RUN_TEST(test_ft_printf_print_one_number_x_specifier);
 	MU_RUN_TEST(test_ft_printf_print_one_number_X_specifier);
+}
+
+MU_TEST_SUITE(ft_printf_x_and_X_bonus_test_suite)
+{
 	MU_RUN_TEST(test_ft_printf_one_positive_hex_with_width_and_precision);
 	MU_RUN_TEST(test_ft_printf_one_positive_hex_with_large_width);
 	MU_RUN_TEST(test_ft_printf_zero_hex_with_width_and_precision);

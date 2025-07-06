@@ -47,7 +47,8 @@
 #include "tests_ft_lstiter.c"
 #include "tests_ft_lstmap.c"
 //gnl
-#include "tests_get_next_line.c"
+#include "tests_gnl_mandatory.c"
+#include "tests_gnl_bonus.c"
 //printf
 #include "tests_ft_printf.c"
 #include "tests_ft_printf_c_and_%.c"
