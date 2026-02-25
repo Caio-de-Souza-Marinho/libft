@@ -224,12 +224,6 @@ AI tools were **not** used in the development of this project. All code was writ
 
 ---
 
-## Compiler Flags
-
-The library is built with `-Wall -Wextra -Werror`.
-
----
-
 ## Author
 
 **caide-so** — caide-so@student.42sp.org.br
